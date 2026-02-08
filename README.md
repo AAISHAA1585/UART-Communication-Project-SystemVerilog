@@ -30,6 +30,15 @@ UART_Comm_VLSI/
 
 ## UART Parameters
 
+| **Parameter** | **Value** |
+| --- | --- |
+| Clock Frequency | 50 MHz |
+| Baud Rate | 115200 |
+| Oversampling | 16× |
+| Data Bits | 8 |
+| Stop Bits | 1 |
+| Parity | None |
+
 ## UART (Universal Asynchronous Receiver Transmitter)
 
 UART is a **serial communication protocol** used for asynchronous data transfer between digital systems.

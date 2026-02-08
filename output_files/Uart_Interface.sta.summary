@@ -1,0 +1,53 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'uart.clk'
+Slack : -2.493
+TNS   : -104.015
+
+Type  : Slow 1100mV 85C Model Hold 'uart.clk'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'uart.clk'
+Slack : -0.724
+TNS   : -63.439
+
+Type  : Slow 1100mV 0C Model Setup 'uart.clk'
+Slack : -2.598
+TNS   : -100.384
+
+Type  : Slow 1100mV 0C Model Hold 'uart.clk'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'uart.clk'
+Slack : -0.724
+TNS   : -63.403
+
+Type  : Fast 1100mV 85C Model Setup 'uart.clk'
+Slack : -0.400
+TNS   : -8.614
+
+Type  : Fast 1100mV 85C Model Hold 'uart.clk'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'uart.clk'
+Slack : -0.091
+TNS   : -4.968
+
+Type  : Fast 1100mV 0C Model Setup 'uart.clk'
+Slack : -0.287
+TNS   : -4.811
+
+Type  : Fast 1100mV 0C Model Hold 'uart.clk'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'uart.clk'
+Slack : -0.089
+TNS   : -4.880
+
+------------------------------------------------------------

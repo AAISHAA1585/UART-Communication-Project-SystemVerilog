@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart.valid_rx",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.busy",
+					"strict" : false
+				},
+				{
+					"name" : "uart.RxD",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxD",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.TxData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "uart.transmit",
+					"strict" : false
+				},
+				{
+					"name" : "uart.reset",
+					"strict" : false
+				},
+				{
+					"name" : "uart.clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

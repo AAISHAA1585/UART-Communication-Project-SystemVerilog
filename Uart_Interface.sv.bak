@@ -1,0 +1,9 @@
+module Uart_Interface;
+
+  // Loopback connection for simulation
+  assign uart.RxD = uart.TxD;
+
+  Uart_Transmitter tx_inst (uart);
+  Uart_Receiver    rx_inst (uart);
+
+endmodule

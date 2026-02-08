@@ -1,0 +1,123 @@
+# Reading pref.tcl
+# do Uart_Interface_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/VLSI\ PROJECTS/UART_Comm_VLSI {D:/VLSI PROJECTS/UART_Comm_VLSI/uart_if.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:14 on Feb 06,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/VLSI PROJECTS/UART_Comm_VLSI" D:/VLSI PROJECTS/UART_Comm_VLSI/uart_if.sv 
+# -- Compiling interface uart_if
+# 
+# Top level modules:
+# 	--none--
+# End time: 13:25:14 on Feb 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/VLSI\ PROJECTS/UART_Comm_VLSI {D:/VLSI PROJECTS/UART_Comm_VLSI/Uart_Receiver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:14 on Feb 06,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/VLSI PROJECTS/UART_Comm_VLSI" D:/VLSI PROJECTS/UART_Comm_VLSI/Uart_Receiver.sv 
+# -- Compiling module Uart_Receiver
+# 
+# Top level modules:
+# 	Uart_Receiver
+# End time: 13:25:14 on Feb 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/VLSI\ PROJECTS/UART_Comm_VLSI {D:/VLSI PROJECTS/UART_Comm_VLSI/Uart_Transmitter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:14 on Feb 06,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/VLSI PROJECTS/UART_Comm_VLSI" D:/VLSI PROJECTS/UART_Comm_VLSI/Uart_Transmitter.sv 
+# -- Compiling module Uart_Transmitter
+# 
+# Top level modules:
+# 	Uart_Transmitter
+# End time: 13:25:15 on Feb 06,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/VLSI\ PROJECTS/UART_Comm_VLSI {D:/VLSI PROJECTS/UART_Comm_VLSI/Uart_Interface.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:15 on Feb 06,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/VLSI PROJECTS/UART_Comm_VLSI" D:/VLSI PROJECTS/UART_Comm_VLSI/Uart_Interface.sv 
+# -- Compiling module Uart_Interface
+# 
+# Top level modules:
+# 	Uart_Interface
+# End time: 13:25:15 on Feb 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/VLSI\ PROJECTS/UART_Comm_VLSI {D:/VLSI PROJECTS/UART_Comm_VLSI/tb_uart_comm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:25:15 on Feb 06,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/VLSI PROJECTS/UART_Comm_VLSI" D:/VLSI PROJECTS/UART_Comm_VLSI/tb_uart_comm.sv 
+# -- Compiling module tb_uart_comm
+# 
+# Top level modules:
+# 	tb_uart_comm
+# End time: 13:25:15 on Feb 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_uart_comm
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_uart_comm 
+# Start time: 13:25:15 on Feb 06,2026
+# Loading sv_std.std
+# Loading work.tb_uart_comm
+# Loading work.uart_if
+# Loading work.Uart_Interface
+# Loading work.Uart_Transmitter
+# Loading work.Uart_Receiver
+# 
+# add wave *
+# ** UI-Msg: (vish-4014) No objects found matching '*'.
+# Error in macro ./Uart_Interface_run_msim_rtl_verilog.do line 17
+# ** UI-Msg: (vish-4014) No objects found matching '*'.
+#     while executing
+# "add wave *"
+add wave uart.clk
+add wave uart.transmit
+add wave uart.busy
+add wave uart.TxD
+add wave uart.RxD
+add wave uart.valid_rx
+add wave uart.TxData
+add wave uart.RxData
+run -all
+# [TX] Time=200000  Sending=A (0x41)
+# [TB] Time=95770000  Sent=A  Received=A (0x41)
+# [RX-MON] Time=95770000  RxData=A (0x41)  Raw=01000001
+# [TX] Time=95780000  Sending=I (0x49)
+# [TB] Time=191350000  Sent=I  Received=I (0x49)
+# [RX-MON] Time=191350000  RxData=I (0x49)  Raw=01001001
+# [TX] Time=191360000  Sending=S (0x53)
+# [TB] Time=286930000  Sent=S  Received=S (0x53)
+# [RX-MON] Time=286930000  RxData=S (0x53)  Raw=01010011
+# [TX] Time=286940000  Sending=H (0x48)
+# [TB] Time=382510000  Sent=H  Received=H (0x48)
+# [RX-MON] Time=382510000  RxData=H (0x48)  Raw=01001000
+# [TX] Time=382520000  Sending=W (0x57)
+# [TB] Time=478090000  Sent=W  Received=W (0x57)
+# [RX-MON] Time=478090000  RxData=W (0x57)  Raw=01010111
+# [TX] Time=478100000  Sending=A (0x41)
+# [TB] Time=573670000  Sent=A  Received=A (0x41)
+# [RX-MON] Time=573670000  RxData=A (0x41)  Raw=01000001
+# [TX] Time=573680000  Sending=R (0x52)
+# [TB] Time=669250000  Sent=R  Received=R (0x52)
+# [RX-MON] Time=669250000  RxData=R (0x52)  Raw=01010010
+# [TX] Time=669260000  Sending=Y (0x59)
+# [TB] Time=764830000  Sent=Y  Received=Y (0x59)
+# [RX-MON] Time=764830000  RxData=Y (0x59)  Raw=01011001
+# [TX] Time=764840000  Sending=A (0x41)
+# [TB] Time=860410000  Sent=A  Received=A (0x41)
+# [RX-MON] Time=860410000  RxData=A (0x41)  Raw=01000001
+# === TEST COMPLETED ===
+# ** Note: $finish    : D:/VLSI PROJECTS/UART_Comm_VLSI/tb_uart_comm.sv(44)
+#    Time: 1160410 ns  Iteration: 0  Instance: /tb_uart_comm
+# 1
+# Break in Module tb_uart_comm at D:/VLSI PROJECTS/UART_Comm_VLSI/tb_uart_comm.sv line 44
+# End time: 14:57:17 on Feb 06,2026, Elapsed time: 1:32:02
+# Errors: 0, Warnings: 0

@@ -1,0 +1,77 @@
+`timescale 1ns/1ps
+
+module tb_uart_comm;
+
+  // clock & reset
+  logic clk;
+  logic reset;
+
+  // UART control
+  logic transmit;
+  logic [7:0] TxData;
+  logic TxD;
+  logic RxD;
+  logic busy;
+  logic [7:0] RxData;
+  logic valid_rx;
+
+  // clock generation (50 MHz)
+  initial clk = 0;
+  always #10 clk = ~clk;
+
+  // DUT instance
+  Uart_Interface dut (
+    .uart.clk(clk),
+    .uart.reset(reset),
+    .uart.transmit(transmit),
+    .uart.TxData(TxData),
+    .uart.TxD(TxD),
+    .uart.RxD(RxD),
+    .uart.busy(busy),
+    .uart.RxData(RxData),
+    .uart.valid_rx(valid_rx)
+  );
+
+  // loopback
+  assign RxD = TxD;
+
+  // test sequence
+  initial begin
+    reset = 1;
+    transmit = 0;
+    TxData = 8'h00;
+
+    #100;
+    reset = 0;
+
+    send_byte("S");
+    send_byte("A");
+    send_byte("U");
+    send_byte("R");
+    send_byte("A");
+    send_byte("V");
+
+    #200000;
+    $display("=== TEST COMPLETED ===");
+    $finish;
+  end
+
+  // task to send one byte
+  task send_byte(input byte data);
+    begin
+      @(negedge clk);
+      while (busy)
+        @(negedge clk);
+
+      TxData = data;
+      transmit = 1;
+      @(negedge clk);
+      transmit = 0;
+
+      // wait for reception
+      wait (valid_rx == 1);
+      $display("[TB] Sent: %c  Received: %c", data, RxData);
+    end
+  endtask
+
+endmodule

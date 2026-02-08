@@ -1,0 +1,88 @@
+|Uart_Interface
+uart.valid_rx <> Uart_Transmitter:tx_inst.uart.valid_rx
+uart.valid_rx <> Uart_Receiver:rx_inst.uart.valid_rx
+uart.RxData[0] <> Uart_Transmitter:tx_inst.uart.RxData[0]
+uart.RxData[0] <> Uart_Receiver:rx_inst.uart.RxData[0]
+uart.RxData[1] <> Uart_Transmitter:tx_inst.uart.RxData[1]
+uart.RxData[1] <> Uart_Receiver:rx_inst.uart.RxData[1]
+uart.RxData[2] <> Uart_Transmitter:tx_inst.uart.RxData[2]
+uart.RxData[2] <> Uart_Receiver:rx_inst.uart.RxData[2]
+uart.RxData[3] <> Uart_Transmitter:tx_inst.uart.RxData[3]
+uart.RxData[3] <> Uart_Receiver:rx_inst.uart.RxData[3]
+uart.RxData[4] <> Uart_Transmitter:tx_inst.uart.RxData[4]
+uart.RxData[4] <> Uart_Receiver:rx_inst.uart.RxData[4]
+uart.RxData[5] <> Uart_Transmitter:tx_inst.uart.RxData[5]
+uart.RxData[5] <> Uart_Receiver:rx_inst.uart.RxData[5]
+uart.RxData[6] <> Uart_Transmitter:tx_inst.uart.RxData[6]
+uart.RxData[6] <> Uart_Receiver:rx_inst.uart.RxData[6]
+uart.RxData[7] <> Uart_Transmitter:tx_inst.uart.RxData[7]
+uart.RxData[7] <> Uart_Receiver:rx_inst.uart.RxData[7]
+uart.busy <> Uart_Transmitter:tx_inst.uart.busy
+uart.busy <> Uart_Receiver:rx_inst.uart.busy
+uart.RxD <> Uart_Transmitter:tx_inst.uart.RxD
+uart.RxD <> Uart_Receiver:rx_inst.uart.RxD
+uart.RxD <> uart.RxD
+uart.TxD <> Uart_Transmitter:tx_inst.uart.TxD
+uart.TxD <> Uart_Receiver:rx_inst.uart.TxD
+uart.TxData[0] <> Uart_Transmitter:tx_inst.uart.TxData[0]
+uart.TxData[0] <> Uart_Receiver:rx_inst.uart.TxData[0]
+uart.TxData[1] <> Uart_Transmitter:tx_inst.uart.TxData[1]
+uart.TxData[1] <> Uart_Receiver:rx_inst.uart.TxData[1]
+uart.TxData[2] <> Uart_Transmitter:tx_inst.uart.TxData[2]
+uart.TxData[2] <> Uart_Receiver:rx_inst.uart.TxData[2]
+uart.TxData[3] <> Uart_Transmitter:tx_inst.uart.TxData[3]
+uart.TxData[3] <> Uart_Receiver:rx_inst.uart.TxData[3]
+uart.TxData[4] <> Uart_Transmitter:tx_inst.uart.TxData[4]
+uart.TxData[4] <> Uart_Receiver:rx_inst.uart.TxData[4]
+uart.TxData[5] <> Uart_Transmitter:tx_inst.uart.TxData[5]
+uart.TxData[5] <> Uart_Receiver:rx_inst.uart.TxData[5]
+uart.TxData[6] <> Uart_Transmitter:tx_inst.uart.TxData[6]
+uart.TxData[6] <> Uart_Receiver:rx_inst.uart.TxData[6]
+uart.TxData[7] <> Uart_Transmitter:tx_inst.uart.TxData[7]
+uart.TxData[7] <> Uart_Receiver:rx_inst.uart.TxData[7]
+uart.transmit <> Uart_Transmitter:tx_inst.uart.transmit
+uart.transmit <> Uart_Receiver:rx_inst.uart.transmit
+uart.reset <> Uart_Transmitter:tx_inst.uart.reset
+uart.reset <> Uart_Receiver:rx_inst.uart.reset
+uart.clk <> Uart_Transmitter:tx_inst.uart.clk
+uart.clk <> Uart_Receiver:rx_inst.uart.clk
+
+
+|Uart_Interface|Uart_Transmitter:tx_inst
+uart.valid_rx <> <UNC>
+uart.RxData[0] <> <UNC>
+uart.RxData[1] <> <UNC>
+uart.RxData[2] <> <UNC>
+uart.RxData[3] <> <UNC>
+uart.RxData[4] <> <UNC>
+uart.RxData[5] <> <UNC>
+uart.RxData[6] <> <UNC>
+uart.RxData[7] <> <UNC>
+uart.busy <> uart.busy~reg0
+uart.RxD <> <UNC>
+uart.TxD <> uart.TxD~reg0
+
+
+|Uart_Interface|Uart_Receiver:rx_inst
+uart.valid_rx <> uart.valid_rx~reg0
+uart.RxData[0] <> uart.RxData[0]
+uart.RxData[1] <> uart.RxData[1]
+uart.RxData[2] <> uart.RxData[2]
+uart.RxData[3] <> uart.RxData[3]
+uart.RxData[4] <> uart.RxData[4]
+uart.RxData[5] <> uart.RxData[5]
+uart.RxData[6] <> uart.RxData[6]
+uart.RxData[7] <> uart.RxData[7]
+uart.busy <> <UNC>
+uart.TxD <> <UNC>
+uart.TxData[0] <> <UNC>
+uart.TxData[1] <> <UNC>
+uart.TxData[2] <> <UNC>
+uart.TxData[3] <> <UNC>
+uart.TxData[4] <> <UNC>
+uart.TxData[5] <> <UNC>
+uart.TxData[6] <> <UNC>
+uart.TxData[7] <> <UNC>
+uart.transmit <> <UNC>
+
+

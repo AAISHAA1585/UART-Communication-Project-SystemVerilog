@@ -1,0 +1,26 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/uart_if.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/Uart_Receiver.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/Uart_Transmitter.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/Uart_Interface.sv}
+
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/uart_transaction.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/uart_scoreboard.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/uart_monitor.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/uart_generator.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/uart_environment.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/uart_driver.sv}
+vlog -sv -work work +incdir+D:/VLSI/UART_Comm_VLSI {D:/VLSI/UART_Comm_VLSI/tb_uart_interface.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_uart_interface
+
+add wave *
+view structure
+view signals
+run -all
